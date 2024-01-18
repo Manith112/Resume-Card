@@ -1,0 +1,320 @@
+*{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* color: #8A2BE2; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(173, 240, 173);
+}
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1100px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    box-shadow: 
+    5px 5px 10px rgba(0, 0, 0, 0.3),
+    -5px -5px 10px rgba(0, 0, 0, 0.3),
+    5px -5px 10px rgba(0, 0, 0, 0.3),
+    -5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+/* green part  */
+.green{
+    width: 30%;
+    border-radius: 20px 0 0 20px;
+    background-color: rgb(26, 99, 26);
+    padding: 250px 0px 20px 0px;
+    position: relative;
+}
+.email{
+    color: wheat;
+    padding: 10px 30px;
+    animation: slideIn 1s ease-in-out;
+}
+.email-1{
+    display: flex;
+    color: white;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+/* row hr  */
+.white-row{
+    margin: 20px 0;
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+.contact-mobile{
+    display: none;
+}
+/*  */
+.find{
+    padding: 0 30px;
+    color: white;
+}
+/* logo  */
+.logos{
+    margin: 10px 30px;
+    gap: 20px;
+    display: flex;
+}
+.logos > #discord > img, .logos > #linkedin > img, .logos > #twitter > img{
+    opacity: 0.7;
+}
+.logos > #discord > img:hover, .logos > #linkedin > img:hover, .logos > #twitter > img:hover{
+    opacity: 1;
+}
+/* image  */
+.mine{
+    position: absolute;
+    margin: 40px 0px 20px 0;
+    left: 300px;
+    animation: slideIn-img 1s ease-in-out;
+}
+.mine > img {
+    width: 350px;
+    height: 450px;
+}
+@keyframes slideIn-img {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+/* white  */
+.white{
+    background-color:  white;
+    width: 70%;
+    border-radius: 0 20px 20px 0;
+    padding: 60px 20px 20px 350px;
+}
+.white > .first-name{
+    color: green;
+}
+.white > h1{
+    letter-spacing: 3px;
+}
+.career{
+    padding: 10px 0;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+/* green cube  */
+.white-cube{
+    position: absolute;
+    background-color: rgb(173, 240, 173);
+    padding: 30px;
+    top: 100px;
+    left: 270px;
+    animation: bounce 1.5s infinite,
+    popupAnimation 1.5s ease-out;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  /* second green cube  */
+.green-cube{
+    position: absolute;
+    background-color: rgb(173, 240, 173);
+    padding: 30px;
+    bottom: 40px;
+    left: 330px;
+    animation: bounce-nick 1.5s infinite,
+    popupAnimation 1.5s ease-out;
+}
+@keyframes bounce-nick {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-20px);
+    }
+    60% {
+      transform: translateX(-10px);
+    }
+  }
+  @keyframes popupAnimation {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  /* circle  */
+  .circle{
+    position: absolute;
+    background-color:  rgb(26, 99, 26);
+   width: 100px;
+   height: 100px;
+    top: 0px;
+    border-radius: 0 20px 0px 100px;
+    right: 0px;
+}
+
+/* text typing animation */
+.detail{
+    animation:  typing 2.5s steps(40, end);
+    overflow: hidden;
+    /* white-space: pre-wrap; */
+}
+@keyframes typing {
+    from { height: 0 }
+    to { height: 35% }
+  }
+ 
+  /*  */
+.career > .dot{
+    height: 5px;
+    width: 5px;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+.work{
+    padding: 20px 0;
+}
+ul{
+    line-height: 30px;
+}
+ul > li{
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 1050px){
+    .mine{
+        position: absolute;
+        margin: 20px 0px 20px 0;
+        left: 40px;
+        animation: slideIn-img 1s ease-in-out;
+    }
+    .mine > img {
+        width: 200px;
+        height: 220px;
+    }
+    .white{
+        background-color:  white;
+        width: 70%;
+        border-radius: 0 20px 20px 0;
+        padding: 60px 20px 20px 50px;
+    }
+    .white-cube{
+        padding: 20px;
+        left: 20px;
+    }
+    .green-cube{
+        padding: 20px;
+        bottom: 280px;
+        left: 60px;
+        animation: bounce-nick 1.5s infinite;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .mine{
+        margin: 50px 0px 20px 0;
+     
+    }
+    .mine > img {
+        width: 150px;
+        height: 170px;
+    }
+    .white-cube{
+        padding: 15px;
+    }
+    .green-cube{
+        padding: 15px;
+        bottom: 480px;
+        left: 180px;
+        animation: bounce-nick 1.5s infinite;
+    }
+    .email{
+        color: wheat;
+        padding: 20px;
+    }
+   
+}
+
+@media screen and (max-width: 550px){
+    .mine{
+        margin: 60px 0px 20px 0;
+        left: 5px;
+    }
+    .mine > img {
+        width: 120px;
+        height: 150px;
+    }
+    .white-cube, .green-cube{
+        display: none;
+    }
+    .white{
+        padding: 60px 20px 20px 20px;
+    }
+    .career{
+        gap: 5px;
+    }
+    .find{
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    .logos{
+        margin: 30px 20px 10px 20px;
+        gap: 10px;
+    }
+    .contact-mobile{
+        display: flex;
+    }
+    .email > .contact{
+        display: none;
+    }
+}
+@media screen and (max-width: 400px){
+    .mine{
+        margin: 80px 0px 20px 0;
+        left: 5px;
+    }
+    .mine > img {
+        width: 100px;
+        height: 120px;
+    }
+    .email{
+        padding: 20px 5px;
+    }
+    .find{
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .logos{
+        margin: 30px 20px 10px 10px;
+        gap: 10px;
+    }
+}
